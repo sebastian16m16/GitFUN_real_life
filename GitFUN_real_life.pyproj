@@ -22,6 +22,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GitFUN_real_life.py" />
+    <Compile Include="src\client.py" />
+    <Compile Include="src\server.py" />
+    <Compile Include="src\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\test_client.py" />
+    <Compile Include="test\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="test\" />
+    <Folder Include="src\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
