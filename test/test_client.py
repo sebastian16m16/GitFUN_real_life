@@ -54,6 +54,14 @@ class TestClient(unittest.TestCase):
         status = self.client.get_device_status(id)
         self.assertEqual(status, 'NOK: not found')
 
+    def test_trigger_event(self):
+        id = '1234'
+        sensor = TempSensor(id, 'ligia', 'OK')
+        value = sensor.get_data()
+        self.assertEqual(sensor.OOR(), True)
+        event = sensor.reset_system(id)
+        self.assertEqual(event.lower(), 'reset')
+
 
 if __name__ == '__main__':
     unittest.main()
